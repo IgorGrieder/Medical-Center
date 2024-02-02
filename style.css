@@ -1,61 +1,61 @@
 /* Standarts */
 :root {
-    font-size: 62.5%; /* To make 1 rem = 10 px */ 
-    --fw-300: 300;
-    --fw-600: 600;
-    --fw-800: 800;
+	font-size: 62.5%; /* To make 1 rem = 10 px */
+	--fw-300: 300;
+	--fw-600: 600;
+	--fw-800: 800;
 
-    --fs-300: 1rem;
+	--fs-300: 1rem;
 	--fs-600: 1.2rem;
 	--fs-800: 2rem;
 
-    --color-header: #04abe4;
-    --color-box1: #66cced;
-    --color-box2: #0d7ec2;
-    --color-box3: #203464;
-    --color-date: #0d7ec2;
-    --color-notifications: #04abe4;
+	--color-blue: #04abe4;
+	--color-box1: #66cced;
+	--color-box2: #0d7ec2;
+	--color-box3: #203464;
+	--color-date: #0d7ec2;
+	--color-light-gray: #ccc;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 /* Box sizing rules */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-    text-decoration-skip-ink: auto;
+	text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
 img {
-    max-width: 100%;
-    display: block;
+	max-width: 100%;
+	display: block;
 }
 
 /* Set core root defaults */
 html:focus-within {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
-    list-style: none;
+	list-style: none;
 }
 
 /* Set core body defaults */
 body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -63,7 +63,7 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+	font: inherit;
 }
 
 /*
@@ -72,13 +72,13 @@ CSS GERAL
 
 */
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
+body {
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
-    max-width: 110rem;
-    margin-inline: auto;
+.container {
+	max-width: 110rem;
+	margin-inline: auto;
 }
 
 /*
@@ -89,140 +89,216 @@ CSS ESPECIFICO
 
 /* HEADER */
 
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-block: 2.5rem;
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding-block: 2.5rem;
 }
 
-.header img{
-    margin-right: auto;
+.header img {
+	margin-right: auto;
 }
 
-ul{
-    display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
+ul {
+	display: flex;
+	justify-content: flex-end;
+	gap: 1rem;
 }
 
-ul li{
-    list-style: none;
-    text-transform: uppercase;
-    font-size: var(--fs-800);
-    font-weight: var(--fw-300);
+ul li {
+	list-style: none;
+	text-transform: uppercase;
+	font-size: var(--fs-800);
+	font-weight: var(--fw-300);
 }
 
-ul li a{
-    text-decoration: none;
-    color: black;
-    padding: 1rem;
+ul li a {
+	text-decoration: none;
+	color: black;
+	padding: 1rem;
 }
 
-ul li:hover{
-    background-color: var(--color-header);
+ul li:hover {
+	background-color: var(--color-blue);
 }
 
 /* BANNER AREA */
 
-.banner-main{
-    background-image: url(img/img1.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: calc(100vh - 94px);
-    color: white;
+.banner-main {
+	background-image: url(img/img1.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: calc(100vh - 94px);
+	color: white;
 }
 
-.flex.container{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.flex.container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }
 
-.banner-main h1{
-    margin-top: 20rem;
-    font-size: 5rem;
-    font-weight: var(--fw-800);
-    line-height: 1.2;
+.banner-main h1 {
+	margin-top: 20rem;
+	font-size: 5rem;
+	font-weight: var(--fw-800);
+	line-height: 1.2;
 }
 
-.banner-main h4{
-    margin-top: 1rem;
-    font-size: var(--fs-800);
-    font-weight: var(--fw-800);
+.banner-main h4 {
+	margin-top: 1rem;
+	font-size: var(--fs-800);
+	font-weight: var(--fw-800);
 }
 
-.banner-boxes{
-    margin-top: auto;
-    display: flex;
+.banner-boxes {
+	margin-top: auto;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 5rem;
 }
 
 .banner-boxes > * {
-    flex: 1;
+	flex: 1;
 }
 
-.banner-boxes .box{
-    padding-inline: 1.25rem;
-    padding-block: 2rem 0rem;
+.banner-boxes .box {
+	padding-inline: 1.25rem;
+	padding-block: 2rem 0rem;
+	min-width: 300px;
 }
 
-.box h6{
-    font-size: 2.5rem;
-    font-weight: var(--fw-800);
-    margin-bottom: 2rem;
+.box h6 {
+	font-size: 2.5rem;
+	font-weight: var(--fw-800);
+	margin-bottom: 2rem;
 }
 
-.box p{
-    font-size: 1.5rem;
-    font-weight: var(--fw-600);
-    line-height: 1.5;
+.box p {
+	font-size: 1.5rem;
+	font-weight: var(--fw-600);
+	line-height: 1.5;
 }
 
-.banner-boxes .box:first-child{
-    background-color: var(--color-box1);
+.banner-boxes .box:first-child {
+	background-color: var(--color-box1);
 }
 
-.banner-boxes .box:nth-child(2){
-    background-color: var(--color-box2);
+.banner-boxes .box:nth-child(2) {
+	background-color: var(--color-box2);
 }
 
-.banner-boxes .box:nth-child(3){
-    background-color: var(--color-box3);
+.banner-boxes .box:nth-child(3) {
+	background-color: var(--color-box3);
 }
 
-.box a{
-    display: block;
-    padding: 1.5rem;
-    max-width: max-content;
-    margin-top: 5rem;
-    border: 1px solid white;
-    font-size: var(--fs-600);
-    font-weight: var(--fw-600);
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    margin-bottom: 2rem;
+.box a {
+	display: block;
+	padding: 1.5rem;
+	max-width: max-content;
+	margin-top: 5rem;
+	border: 1px solid white;
+	font-size: var(--fs-600);
+	font-weight: var(--fw-600);
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	margin-bottom: 2rem;
 }
 
-.box a:hover{
-    background-color: white;
-    color: rgb(112, 112, 243);
+.box a:hover {
+	background-color: white;
+	color: rgb(112, 112, 243);
 }
 
-.box .hours{
-    display: flex;
-    justify-content: flex-end;
-    border-bottom: 1px solid white;
-    margin-bottom: 1.5rem;
+.box .hours {
+	display: flex;
+	justify-content: flex-end;
+	border-bottom: 1px solid white;
+	margin-bottom: 1.5rem;
 }
 
-.box .hours p, .box .hours h6{
-    font-size: 1.5rem;
-    margin: 0;
-    padding-bottom: 1rem;
+.box .hours p,
+.box .hours h6 {
+	font-size: 1.5rem;
+	margin: 0;
+	padding-bottom: 1rem;
 }
 
-.box .hours p{
-    margin-left: auto;
+.box .hours p {
+	margin-left: auto;
+}
+
+/* NEWS AREA */
+
+.info-area {
+	display: flex;
+}
+
+.right-area {
+	flex: 1;
+}
+
+.left-area {
+	flex: 2;
+}
+
+.departaments-content {
+	max-width: 333px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3rem;
+}
+
+.square {
+	height: 15rem;
+	width: 15rem;
+	background-color: var(--color-blue);
+}
+
+.bar {
+	background-color: var(--color-blue);
+	width: 6rem;
+	height: 0.3rem;
+	margin-bottom: 2rem;
+}
+
+.info-area h2 {
+	font-size: 2.5rem;
+	margin-bottom: 0.5rem;
+	margin-top: 3rem;
+}
+
+.info-area h4,
+.appointment-contact {
+	font-size: 1.6rem;
+	font-weight: 400;
+}
+
+.info-area h4 {
+	color: var(--color-light-gray);
+}
+
+.appointment-contact {
+	border-top: 1px solid var(--color-light-gray);
+	padding-block: 1rem;
+}
+
+.appointment-contact:first-of-type {
+	margin-top: 2rem;
+}
+
+.appointment-contact:last-of-type {
+	border-bottom: 1px solid var(--color-light-gray);
+}
+
+.appointment-contact a {
+	text-decoration: none;
+	color: var(--color-blue);
+}
+
+.appointment-contact a:hover {
+	text-decoration: underline;
 }
