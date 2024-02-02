@@ -10,6 +10,11 @@
 	--fs-800: 2rem;
 
     --color-header: #04abe4;
+    --color-box1: #66cced;
+    --color-box2: #0d7ec2;
+    --color-box3: #203464;
+    --color-date: #0d7ec2;
+    --color-notifications: #04abe4;
 }
 
 * {
@@ -116,4 +121,108 @@ ul li a{
 
 ul li:hover{
     background-color: var(--color-header);
+}
+
+/* BANNER AREA */
+
+.banner-main{
+    background-image: url(img/img1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 94px);
+    color: white;
+}
+
+.flex.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.banner-main h1{
+    margin-top: 20rem;
+    font-size: 5rem;
+    font-weight: var(--fw-800);
+    line-height: 1.2;
+}
+
+.banner-main h4{
+    margin-top: 1rem;
+    font-size: var(--fs-800);
+    font-weight: var(--fw-800);
+}
+
+.banner-boxes{
+    margin-top: auto;
+    display: flex;
+}
+
+.banner-boxes > * {
+    flex: 1;
+}
+
+.banner-boxes .box{
+    padding-inline: 1.25rem;
+    padding-block: 2rem 0rem;
+}
+
+.box h6{
+    font-size: 2.5rem;
+    font-weight: var(--fw-800);
+    margin-bottom: 2rem;
+}
+
+.box p{
+    font-size: 1.5rem;
+    font-weight: var(--fw-600);
+    line-height: 1.5;
+}
+
+.banner-boxes .box:first-child{
+    background-color: var(--color-box1);
+}
+
+.banner-boxes .box:nth-child(2){
+    background-color: var(--color-box2);
+}
+
+.banner-boxes .box:nth-child(3){
+    background-color: var(--color-box3);
+}
+
+.box a{
+    display: block;
+    padding: 1.5rem;
+    max-width: max-content;
+    margin-top: 5rem;
+    border: 1px solid white;
+    font-size: var(--fs-600);
+    font-weight: var(--fw-600);
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.box a:hover{
+    background-color: white;
+    color: rgb(112, 112, 243);
+}
+
+.box .hours{
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid white;
+    margin-bottom: 1.5rem;
+}
+
+.box .hours p, .box .hours h6{
+    font-size: 1.5rem;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+.box .hours p{
+    margin-left: auto;
 }
