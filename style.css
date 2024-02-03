@@ -233,6 +233,8 @@ ul li:hover {
 
 /* NEWS AREA */
 
+/* RIGHT AREA */
+
 .info-area {
 	display: flex;
 }
@@ -301,4 +303,59 @@ ul li:hover {
 
 .appointment-contact a:hover {
 	text-decoration: underline;
+}
+
+/* LEFT AREA */
+
+.news-area {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3rem;
+}
+
+.news-area > * {
+	max-width: 33rem;
+}
+
+.status{
+	display: flex;
+	margin-bottom: 3rem;
+}
+
+.news .date,
+.news .notifications {
+	font-size: var(--fs-600);
+	padding: 1rem;
+	color: white;
+}
+
+.news .date {
+	padding: 1rem;
+	background-color: var(--color-box2);
+}
+
+.date::after{
+    content: "";
+    position: absolute;
+    margin-top: 10px;
+    display: block;
+
+    border-left: 20px solid #0d7ec2;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid transparent;
+}
+
+.news .notifications {
+	margin-left: 0.5rem;
+	background-color: var(--color-blue);
+}
+
+.news h2{
+	font-size: var(--fs-800);
+	font-weight: var(--fw-800);
+}
+
+.news p{
+	font-size: var(--fs-600);
+	font-weight: var(--fw-600);
 }
