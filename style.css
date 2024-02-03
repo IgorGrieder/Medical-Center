@@ -15,6 +15,7 @@
 	--color-box3: #203464;
 	--color-date: #0d7ec2;
 	--color-light-gray: #ccc;
+	--color-darker-gray: #807777;
 }
 
 * {
@@ -79,6 +80,10 @@ body {
 .container {
 	max-width: 110rem;
 	margin-inline: auto;
+}
+
+footer {
+	background-color: black;
 }
 
 /*
@@ -153,21 +158,22 @@ ul li:hover {
 	font-weight: var(--fw-800);
 }
 
-.banner-boxes {
+.boxes {
 	margin-top: auto;
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 5rem;
 }
 
-.banner-boxes > * {
+.boxes > * {
 	flex: 1;
 }
 
-.banner-boxes .box {
+.box {
 	padding-inline: 1.25rem;
 	padding-block: 2rem 0rem;
 	min-width: 300px;
+	color: white;
 }
 
 .box h6 {
@@ -182,15 +188,18 @@ ul li:hover {
 	line-height: 1.5;
 }
 
-.banner-boxes .box:first-child {
+.box:first-of-type,
+.box:nth-of-type(4) {
 	background-color: var(--color-box1);
 }
 
-.banner-boxes .box:nth-child(2) {
+.box:nth-of-type(2),
+.box:nth-of-type(5) {
 	background-color: var(--color-box2);
 }
 
-.banner-boxes .box:nth-child(3) {
+.box:nth-of-type(3),
+.box:nth-of-type(6) {
 	background-color: var(--color-box3);
 }
 
@@ -317,7 +326,7 @@ ul li:hover {
 	max-width: 33rem;
 }
 
-.status{
+.status {
 	display: flex;
 	margin-bottom: 3rem;
 }
@@ -334,15 +343,15 @@ ul li:hover {
 	background-color: var(--color-box2);
 }
 
-.date::after{
-    content: "";
-    position: absolute;
-    margin-top: 10px;
-    display: block;
+.date::after {
+	content: "";
+	position: absolute;
+	margin-top: 10px;
+	display: block;
 
-    border-left: 20px solid #0d7ec2;
-    border-bottom: 20px solid transparent;
-    border-right: 20px solid transparent;
+	border-left: 20px solid #0d7ec2;
+	border-bottom: 20px solid transparent;
+	border-right: 20px solid transparent;
 }
 
 .news .notifications {
@@ -350,12 +359,130 @@ ul li:hover {
 	background-color: var(--color-blue);
 }
 
-.news h2{
+.news h2 {
 	font-size: var(--fs-800);
 	font-weight: var(--fw-800);
 }
 
-.news p{
+.news p {
 	font-size: var(--fs-600);
 	font-weight: var(--fw-600);
+}
+
+/* FOOTER AREA */
+
+.footer .boxes .box h6 {
+	margin-bottom: 0;
+}
+
+.footer .boxes .box {
+	padding-block: 1rem;
+}
+
+.box p {
+	font-weight: var(--fw-600);
+	font-size: 1.5rem;
+	margin-top: 2rem;
+}
+
+.box p a {
+	padding: 0.5rem 1rem;
+	margin-left: 2rem;
+	text-decoration: none;
+	display: inline-block;
+	margin: 0;
+	margin-left: 1rem;
+}
+
+.box p a:hover {
+	background-color: white;
+}
+
+.division {
+	display: flex;
+}
+
+.division > * {
+	flex: 1;
+	min-width: 20rem;
+	padding-right: 2rem;
+}
+
+.left-division h2,
+.mid-division h2,
+.right-division h2 {
+	color: var(--color-light-gray);
+	font-size: 2.5rem;
+	margin-bottom: 0.5rem;
+	margin-top: 3rem;
+}
+
+.left-division p,
+.right-division p {
+	color: var(--color-darker-gray);
+	font-size: 1.5rem;
+	font-weight: var(--fw-300);
+}
+
+.left-division p:nth-child(4) {
+	margin-top: 2rem;
+}
+
+.med-info {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 1rem;
+}
+
+.med-info p:first-child {
+	margin-right: auto;
+}
+
+.med-info a {
+	text-decoration: none;
+	color: white;
+}
+
+.med-info a:hover {
+	text-decoration: underline;
+}
+
+.post-box,
+.tweet-box {
+	margin-top: 1rem;
+}
+
+.post-box p,
+.post-box a,
+.tweet-box p,
+.tweet-box a {
+	color: white;
+	font-size: 1.5rem;
+}
+
+.post-box a,
+.tweet-box a {
+	color: var(--color-blue);
+	text-decoration: none;
+}
+
+.post-box a:hover,
+.tweet-box a:hover {
+	text-decoration: underline;
+}
+
+.post-box p::before,
+.tweet-box p::before {
+	content: "→";
+	margin-right: 1rem;
+}
+
+.copyright{
+	text-align: left;
+	color: var(--color-darker-gray);
+	font-size: var(--fs-300);
+	font-weight: var(--fw-300);
+	padding-top: 1rem;
+	border-top: 1px solid var(--color-light-gray);
+	margin-top: 2rem;
 }
